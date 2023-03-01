@@ -23,7 +23,8 @@ public class ReviewController {
 
     @PostMapping("/create")
     public HttpStatus createNewReview (@RequestBody Map body) {
-        Review review = new Review(body.get("movieTitle").toString(), body.get("movieOverview").toString(), body.get("moviePoster").toString(), body.get("review").toString(), body.get("userId").toString());
+        Review review = new Review(body.get("movieTitle").toString(), body.get("movieOverview").toString(), body.get("moviePoster").toString(),
+                body.get("review").toString(), body.get("userId").toString(), body.get("username").toString());
         reviewService.createReview(review);
         return HttpStatus.CREATED;
     }

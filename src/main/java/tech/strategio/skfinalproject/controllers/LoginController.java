@@ -44,6 +44,7 @@ public class LoginController {
         else{
             response.add(HttpStatus.OK);
             response.add(user.getId());
+            response.add(user.getUsername());
             return response;
         }
     }

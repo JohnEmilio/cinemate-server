@@ -18,9 +18,8 @@ public class WebSecuityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/*", "/login/*", "/login", "/reviews","/reviews/*").permitAll()
+                        .requestMatchers("/*", "/login/*", "/login", "/reviews","/reviews/*", "/reviews/delete/*").permitAll()
                         .anyRequest().authenticated()
-
                 )
                 .csrf().disable();
 //                .formLogin((form) -> form

@@ -26,11 +26,14 @@ public class Review {
 
     private String userId;
 
-    public Review(String movieTitle, String movieOverview, String moviePoster, String review, String userId) {
+    private String username;
+
+    public Review(String movieTitle, String movieOverview, String moviePoster, String review, String userId, String username) {
         this.movieTitle = movieTitle;
         this.movieOverview = movieOverview;
         this.moviePoster = moviePoster;
         this.review = review;
         this.userId = userId;
+        this.username = username;
     }
 }
