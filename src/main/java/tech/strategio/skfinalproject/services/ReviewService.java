@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 import tech.strategio.skfinalproject.models.Review;
 import tech.strategio.skfinalproject.repositories.ReviewRepository;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ReviewService {
@@ -35,4 +37,13 @@ public class ReviewService {
     public void deleteReview(ObjectId id) {
         reviewRepository.deleteById(id);
     }
+
+    public Review getReviewById(ObjectId id) {
+        return reviewRepository.findById(id).get();
+    }
+
+//    public void updateReview(ObjectId id, Review review) {
+//        Review newReview = review;
+//        reviewRepository.findByIdAndUpdate(newReview, id);
+//    }
 }

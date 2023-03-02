@@ -36,4 +36,5 @@ public class Review {
         this.userId = userId;
         this.username = username;
     }
+
 }

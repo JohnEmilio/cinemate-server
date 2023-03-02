@@ -18,7 +18,9 @@ public class WebSecuityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/*", "/login/*", "/login", "/reviews","/reviews/*", "/reviews/delete/*").permitAll()
+                        .requestMatchers("/*","*/*", "/*/*", "*/*/*", "/login/*", "/login", "/reviews","/reviews/*",
+                                "/reviews/delete/*", "/user", "/user/*", "/exploreReviews", "/review/*")
+                        .permitAll()
                         .anyRequest().authenticated()
                 )
                 .csrf().disable();

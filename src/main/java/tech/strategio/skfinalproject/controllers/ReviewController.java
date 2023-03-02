@@ -46,4 +46,18 @@ public class ReviewController {
         reviewService.deleteReview(new ObjectId(reviewId));
         return HttpStatus.OK;
     }
+
+//    @GetMapping("/edit/{id}")
+//    public ResponseEntity<Review> getReviewById(@RequestParam String reviewId) {
+//        Review review = reviewService.getReviewById(new ObjectId(reviewId));
+//        return new ResponseEntity<>(review, HttpStatus.OK);
+//    }
+//
+//    @PutMapping("/edit/{id}")
+//    public ResponseEntity<Review> updateReview(@RequestParam String reviewId, @RequestBody Map body) {
+//        Review review = new Review(body.get("movieTitle").toString(), body.get("movieOverview").toString(), body.get("moviePoster").toString(),
+//                body.get("review").toString(), body.get("userId").toString(), body.get("username").toString());
+//        reviewService.updateReview(new ObjectId(reviewId), review);
+//        return new ResponseEntity<>(review, HttpStatus.OK);
+//    }
 }

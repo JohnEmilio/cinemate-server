@@ -39,14 +39,13 @@ public class LoginController {
         }
         if(!encoder.matches(body.get("password").toString(), user.getPassword())){
             response.add("Invalid password");
-            return response;
         }
         else{
             response.add(HttpStatus.OK);
             response.add(user.getId());
             response.add(user.getUsername());
-            return response;
         }
+        return response;
     }
 
     @PostMapping("/new-user")
